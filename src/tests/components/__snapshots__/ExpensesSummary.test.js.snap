@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should total a single expense 1`] = `
+<div>
+  <p>
+    Viewing 
+    1
+     
+    expense
+     totalling 
+    $94.34
+  </p>
+</div>
+`;
+
+exports[`should total multiple expenses 1`] = `
+<div>
+  <p>
+    Viewing 
+    2
+     
+    expenses
+     totalling 
+    $94.34
+  </p>
+</div>
+`;
