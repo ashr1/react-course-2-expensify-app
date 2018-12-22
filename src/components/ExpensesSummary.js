@@ -20,14 +20,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-/*
-const mapStateToProps = (state) => {
-    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-    return {
-        expenseCount: visibleExpenses.length,
-        expensesTotal: numeral(expensesTotal(visibleExpenses) / 100).format('$0,0.00')
-    };
-};
-*/
-
 export default connect(mapStateToProps)(ExpensesSummary);
