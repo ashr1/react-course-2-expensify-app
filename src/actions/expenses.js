@@ -13,6 +13,8 @@ import database from '../firebase/firebase';
 
 //redux by default does not allow you to dispatch (for the store to distinguish and modify state approp.)functions 
 
+//where would I fetch the expenses from the db when the app initially loads
+
 export const addExpense = (expense) => ({
     type: 'ADD_EXPENSE',
     expense
@@ -48,3 +50,24 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 });
+
+// SET_EXPENSES
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+});
+
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expense').once('value').then((snapshot) => {
+            const expenses = [];
+            snapshot.forEach((childSnapshot) => {
+                const id = childSnapshot.key;
+                expenses.push({id, ...childSnapshot.val()});
+            });
+            dispatch(setExpenses(expenses));
+        });
+        
+    };
+};
+
