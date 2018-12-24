@@ -14,7 +14,7 @@ beforeEach(() => {
     wrapper = shallow(
         <EditExpensePage 
             expense={expenses[1]} 
-            editExpense={editExpenseSpy} 
+            startEditExpense={editExpenseSpy} 
             history={historySpy} 
             startRemoveExpense={removeExpenseSpy}
         />
