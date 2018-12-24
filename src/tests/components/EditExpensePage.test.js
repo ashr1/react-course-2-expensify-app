@@ -16,7 +16,7 @@ beforeEach(() => {
             expense={expenses[1]} 
             editExpense={editExpenseSpy} 
             history={historySpy} 
-            removeExpense={removeExpenseSpy}
+            startRemoveExpense={removeExpenseSpy}
         />
     );
 });
@@ -32,7 +32,7 @@ test('should handle editExpense', () => {
     expect(historySpy.push).toHaveBeenLastCalledWith('/');
 });
 
-test('should handle removeExpense', () => {
+test('should handle startRemoveExpense', () => {
     wrapper.find('button').simulate('click');
     expect(removeExpenseSpy).toHaveBeenLastCalledWith({id: expenses[1].id});
     expect(historySpy.push).toHaveBeenLastCalledWith('/');
