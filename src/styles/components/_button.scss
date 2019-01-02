@@ -1,0 +1,24 @@
+.button {
+    color: white;
+    border: none;
+    padding: $s-size;
+    background-color: $blue;
+    font-weight: 300;
+    font-size: $font-size-large;
+
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+}
+
+// 1. Create link modifier
+// 2. Setup style to use no background
+// 3. Apply base and modified class to logout button
+
+.button--link {
+    background: none;
+}
+
+.button--secondary {
+    background-color: #888;
+}

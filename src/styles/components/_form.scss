@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    > * {
+        margin-bottom: $m-size;
+    }
+}
+
+.form__error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+}
+
+// 1. Setup page page header
+// 2. Setup content contain for form and remove button
+// 3. Add button and button--secondary (bg of #888888)
